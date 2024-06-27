@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yFbjwfdQzFfqv33Xt/wg4xE/ALYpFgNQfy7hs+sas7lM8kYeNIl0B5E7Sl3RfQKpbPhrLf8uOszUhF+4X6XTTA==",
+  "dgSpecHash": "7IN7LgbThlx9x9AJZ/izTmayYh8BtD7VH1UIIKD9SJnFAzi3WPYN6IZUG34yB3jITP3X4OkNfgMJa9EoNOFlHA==",
   "success": true,
   "projectFilePath": "C:\\Users\\UKGC\\source\\repos\\RainfallApi\\RainfallApiTests\\RainfallApiTests.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,8 @@
     "C:\\Users\\UKGC\\.nuget\\packages\\microsoft.net.test.sdk\\17.3.2\\microsoft.net.test.sdk.17.3.2.nupkg.sha512",
     "C:\\Users\\UKGC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\UKGC\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
-    "C:\\Users\\UKGC\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\UKGC\\.nuget\\packages\\microsoft.openapi\\1.6.15\\microsoft.openapi.1.6.15.nupkg.sha512",
+    "C:\\Users\\UKGC\\.nuget\\packages\\microsoft.openapi.readers\\1.6.15\\microsoft.openapi.readers.1.6.15.nupkg.sha512",
     "C:\\Users\\UKGC\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.3.2\\microsoft.testplatform.objectmodel.17.3.2.nupkg.sha512",
     "C:\\Users\\UKGC\\.nuget\\packages\\microsoft.testplatform.testhost\\17.3.2\\microsoft.testplatform.testhost.17.3.2.nupkg.sha512",
     "C:\\Users\\UKGC\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
@@ -20,6 +21,7 @@
     "C:\\Users\\UKGC\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\UKGC\\.nuget\\packages\\nunit.analyzers\\3.3.0\\nunit.analyzers.3.3.0.nupkg.sha512",
     "C:\\Users\\UKGC\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
+    "C:\\Users\\UKGC\\.nuget\\packages\\sharpyaml\\2.1.1\\sharpyaml.2.1.1.nupkg.sha512",
     "C:\\Users\\UKGC\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\UKGC\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\UKGC\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
