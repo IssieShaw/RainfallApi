@@ -1,4 +1,6 @@
-﻿namespace RainfallApi.Models
+﻿using RainfallApi.Models;
+
+namespace RainfallApi.Responses
 {
     public class ExternalRainfallReadingResponse
     {

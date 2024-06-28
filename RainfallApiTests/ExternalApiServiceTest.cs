@@ -2,6 +2,7 @@
 using System.Text.Json;
 using NUnit.Framework;
 using RainfallApi.Models;
+using RainfallApi.Responses;
 using RainfallApi.Services;
 using RainfallApiTests.Services;
 

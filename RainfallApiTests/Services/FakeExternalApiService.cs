@@ -1,4 +1,5 @@
 ﻿using RainfallApi.Models;
+using RainfallApi.Responses;
 using RainfallApi.Services;
 
 namespace RainfallApiTests.Services

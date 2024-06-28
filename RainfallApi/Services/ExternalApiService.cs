@@ -1,4 +1,4 @@
-﻿using RainfallApi.Models;
+﻿using RainfallApi.Responses;
 using System.Text.Json;
 
 namespace RainfallApi.Services

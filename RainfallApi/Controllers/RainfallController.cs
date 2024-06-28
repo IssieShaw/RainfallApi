@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using RainfallApi.Models;
+using RainfallApi.Responses;
 using RainfallApi.Services;
 
 namespace RainfallApi.Controllers

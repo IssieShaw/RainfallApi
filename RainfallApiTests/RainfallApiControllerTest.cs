@@ -3,6 +3,7 @@ using RainfallApi.Services;
 using NUnit.Framework;
 using RainfallApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using RainfallApi.Responses;
 
 namespace RainfallApiTests
 {
