@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.OpenApi.Models;
 using RainfallApi.Models;
 using RainfallApi.Services;
 
@@ -11,7 +10,8 @@ namespace RainfallApi.Controllers
     {   
         private readonly IRainfallService _rainfallService;
 
-        public RainfallController(IRainfallService rainfallService)
+        public RainfallController(
+            IRainfallService rainfallService)
         {
             _rainfallService = rainfallService;
         }
@@ -19,19 +19,80 @@ namespace RainfallApi.Controllers
         [HttpGet("stations/{stationId}/readings")]
         public async Task<ActionResult<RainfallReadingResponse>> GetRainfallReadings(
             string stationId,
-            int count)
+            int count = 10)
         {
+            if (count <= 0)
+            {
+                var errorResponse = new ErrorResponse
+                {
+                    Error = new Error
+                    {
+                        Message = "Invalid request",
+                        Detail = new ErrorDetail
+                        {
+                            PropertyName = "count",
+                            Message = "Count must be greater than zero"
+                        }
+                    }
+                };
+                return BadRequest(errorResponse);
+            }
             try
             {
-                var readings = new RainfallReadingResponse();
+                var readings = await _rainfallService.GetRainfallReadings(stationId, count);
+
+                if (readings == null || readings.Readings.Count == 0)
+                {
+                    var errorResponse = new ErrorResponse
+                    {
+                        Error = new Error
+                        {
+                            Message = "No readings found",
+                            Detail = new ErrorDetail
+                            {
+                                PropertyName = "stationId",
+                                Message = $"No readings found for station {stationId}"
+                            }
+                        }
+                    };
+                    return NotFound(errorResponse);
+                }
+
                 return Ok(readings);
             }
             catch (HttpRequestException ex)
             {
-                return StatusCode(500, $"Error retrieving rainfall readings: {ex.Message}");
+                var errorResponse = new ErrorResponse
+                {
+                    Error = new Error
+                    {
+                        Message = $"Error retrieving rainfall readings: {ex.Message}"
+                    }
+                };
+                return StatusCode(500, errorResponse);
             }
-
-            // Should also eventually return: 400, 404 alongside 200 and 500
+            catch (ArgumentNullException ex)
+            {
+                var errorResponse = new ErrorResponse
+                {
+                    Error = new Error
+                    {
+                        Message = $"Invalid input: {ex.Message}"
+                    }
+                };
+                return BadRequest(errorResponse);
+            }
+            catch (Exception ex)
+            {
+                var errorResponse = new ErrorResponse
+                {
+                    Error = new Error
+                    {
+                        Message = $"An unexpected error occurred: {ex.Message}"
+                    }
+                };
+                return StatusCode(500, errorResponse);
+            }
         }
     }
 }

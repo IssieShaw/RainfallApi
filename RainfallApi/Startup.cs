@@ -1,6 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
-using Microsoft.OpenApi.Readers;
+﻿using Microsoft.OpenApi.Models;
+using RainfallApi.Services;
 
 namespace RainfallApi
 {
@@ -15,9 +14,11 @@ namespace RainfallApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient();
             services.AddControllers();
+            services.AddHttpClient();
             services.AddEndpointsApiExplorer();
+            services.AddScoped<IExternalApiService, ExternalApiService>();
+            services.AddScoped<IRainfallService, RainfallService>();
 
             services.AddSwaggerGen(c =>
             {
